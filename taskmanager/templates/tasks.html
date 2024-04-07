@@ -12,6 +12,7 @@
 </div>
 
 <ul class="collapsible">
+    {% if tasks%}
     {% for task in tasks|sort(attribute="due_date") %}
     <li>
         <div class="collapsible-header white-text light-blue darken-4">
@@ -30,6 +31,7 @@
         </div>
     </li>
     {% endfor %}
+    {% endif %}
 </ul>
 
 {% endblock %}
